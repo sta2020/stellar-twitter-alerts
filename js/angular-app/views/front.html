@@ -1,0 +1,33 @@
+<div  ng-controller="frontController" ng-init="init()">
+		<h1 class="cover-heading">Get account notifications on Twitter.</h1>
+    <p class="lead">It's simple just enter your Twitter username and your Stellar account ID to receive all operations on your account via twitter direct messages</p>
+    <p class="lead">
+      
+    </p>
+    <div class="row">
+
+      <div class="col-md-12 col-xs-12">
+        
+        <form class="form form-inline" ng-submit="subscribe()">
+					<div class="form-group">
+						<label class="sr-only" for="username">Twitter Username</label>
+						<div class="input-group">
+				      <div class="input-group-addon">@</div>
+							<input class="form-control" placeholder="Twitter Username. E.g @StellarAlerts" type="text" name="username" ng-model="userData.username" required/>
+						</div>
+	        </div>
+
+					<div class="form-group">
+						<label class="sr-only" for="accountID">Account ID</label>
+						<input class="form-control" placeholder="Stellar Account ID" type="text" name="accountID" ng-model="userData.accountID" required/>
+	        </div>
+					<button type="submit" class="btn btn-info">Submit</button>
+				</form>
+				<small class="help-text text-info">Note: you have to enable your twitter account to receive direct messages from any account or follow @StellarAlerts </small>
+      </div>
+    </div>
+
+
+
+
+</div>
