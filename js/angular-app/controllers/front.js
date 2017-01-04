@@ -1,5 +1,5 @@
 var stellarAlerts = angular.module('stellarAlerts');
-var baseUrl = 'https://stellaralerts.info:8081/';
+var baseUrl = 'https://stellaralerts.info:8000/';
 
 stellarAlerts.controller('frontController', function($scope, $state, $http) {
 	$scope.userData = {};
