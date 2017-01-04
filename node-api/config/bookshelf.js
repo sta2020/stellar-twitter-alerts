@@ -7,7 +7,7 @@ var knex = require('knex')({
 var bookshelf = require('bookshelf')(knex);
 var Record = bookshelf.Model.extend({
   tableName: 'records',
-  hasTimeStamps: true,
+  hasTimestamps: true,
   
 });
 
