@@ -34,7 +34,12 @@ stellarAlerts.controller('frontController', function($scope, $state, $http) {
 					})
 					.error(function(data) {
 						console.log(data);
-						$scope.infoMsg = "Subscription of @"+$scope.userData.username+" failed. Plse try again.";
+						$scope.infoMsg = "Subscription of @"+$scope.userData.username+" failed.";
+						if (data.error) {
+							data.error.forEach(function(e) {
+								$scope.infoMsg += "\n"+e;
+							});
+						}
 					});
 		}
 
